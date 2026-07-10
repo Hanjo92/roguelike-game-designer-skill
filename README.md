@@ -7,7 +7,14 @@ A portable agent skill for designing and reviewing the wider roguelike family: t
 - `SKILL.md` — main agent instructions
 - `references/subgenre-guide.md` — subgenre taxonomy, design priorities, hybrid rules, and diagnostics
 - `references/level-design-checklist.md` — detailed procedural and handcrafted level review
+- `references/item-content-design.md` — item, weapon, relic, card, skill, tag, rarity, and synergy design
+- `references/enemy-encounter-design.md` — enemy roles, telegraphs, threat budgets, waves, elites, bosses, and encounters
+- `references/balance-economy.md` — combat formulas, power budgets, growth curves, economies, rewards, shops, and simulations
+- `references/procedural-generation-algorithms.md` — algorithm selection, hybrid pipelines, validation, repair, seeds, and evaluation
 - `templates/design-spec.md` — implementation-ready feature/system specification
+- `templates/item-spec.md` — implementation-ready item, weapon, or relic specification
+- `templates/encounter-spec.md` — implementation-ready enemy, boss, or encounter specification
+- `templates/balance-model.md` — formulas, target bands, economy ledger, run curve, and sensitivity worksheet
 
 ## Installation
 

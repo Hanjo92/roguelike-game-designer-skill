@@ -1,7 +1,7 @@
 ---
 name: roguelike-game-designer
 description: Use when designing, reviewing, or improving roguelike-family games—including traditional roguelikes, roguelites, action roguelites, deckbuilders, survivors-likes, tactical roguelikes, platform roguelites, strategy hybrids, and extraction hybrids. Covers core loops, procedural generation, runs, combat, builds, progression, difficulty, economy, level design, replayability, and implementation-ready specifications while preserving meaningful decisions, systemic variety, and fair risk.
-version: 1.1.0
+version: 1.2.0
 author: Seunghu Song
 license: MIT
 metadata:
@@ -138,6 +138,8 @@ Each content entry should specify:
 
 Completion criterion: content differs by behavior and decisions, not merely by health, damage, rarity, or art.
 
+Load `references/item-content-design.md` and use `templates/item-spec.md` for items, weapons, relics, cards, skills, and build components. Load `references/enemy-encounter-design.md` and use `templates/encounter-spec.md` for enemies, elites, bosses, waves, and encounter compositions.
+
 ### 6. Build Progression and Difficulty
 
 Separate these concepts:
@@ -222,7 +224,7 @@ Before choosing a generator, define:
 - Required landmarks, shortcuts, loops, gates, and safe spaces
 - What information the layout communicates
 
-Choose an algorithm only after these goals are clear.
+Choose an algorithm only after these goals are clear. Load `references/procedural-generation-algorithms.md` when selecting or combining algorithms, defining generation layers, or specifying validation, repair, deterministic seeds, and batch evaluation.
 
 ### Separate Topology from Geometry
 
@@ -263,7 +265,7 @@ Compose rooms using layers:
 
 Telegraph dangerous combinations before locking the player in. Introduce one pattern, test it, then combine it with previously learned patterns. Reserve rule-breaking surprises for moments where players can still adapt.
 
-For a more detailed specification format, use `references/level-design-checklist.md`.
+For level review use `references/level-design-checklist.md`; for enemy and room threat composition also load `references/enemy-encounter-design.md`.
 
 ## Balancing Method
 
@@ -279,6 +281,8 @@ Begin with relationships, not isolated numbers.
 Track distributions, not only averages. Important signals include win rate by experience band, damage source, pick rate, skip rate, build concentration, resource drought length, room failure rate, and where runs become irrecoverable.
 
 Never infer balance from pick rate alone: popularity can reflect clarity, fantasy, novelty, or ease of use.
+
+Load `references/balance-economy.md` and use `templates/balance-model.md` when the task requires formulas, power budgets, growth curves, resource ledgers, reward/shop tuning, sensitivity analysis, simulation assumptions, or balance change tracking.
 
 ## Response Modes
 
@@ -307,6 +311,32 @@ Return:
 5. Conventions to adopt, reject, or reinterpret
 6. Two likely convention mismatches
 7. Cheapest prototype that can validate the genre fit
+
+### Content Design Mode
+
+Return:
+
+1. Content role, player promise, tags, and acquisition context
+2. Exact trigger, cost, effect, and resolution order
+3. Feedback, telegraph, counterplay, or counterweight
+4. Synergies, anti-synergies, stacking, and recursion safeguards
+5. Tuning knobs and production dependencies
+6. Edge cases and representative test scenarios
+7. Pool coverage or encounter-role impact
+
+Use the item or encounter template according to the content type.
+
+### Balance and Economy Mode
+
+Return:
+
+1. Problem evidence, baseline unit, and target bands
+2. Formula and order of operations
+3. Power budget or resource source/sink ledger
+4. Weak, median, and strong-state comparison
+5. Variance guarantees, scaling caps, and exploit checks
+6. Sensitivity test and simulation/playtest plan
+7. Success metric, observation window, and revert threshold
 
 ### System Design Mode
 
