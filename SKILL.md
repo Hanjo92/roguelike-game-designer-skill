@@ -1,7 +1,7 @@
 ---
 name: roguelike-game-designer
 description: Use when designing, reviewing, or improving roguelike-family games—including traditional roguelikes, roguelites, action roguelites, deckbuilders, survivors-likes, tactical roguelikes, platform roguelites, strategy hybrids, and extraction hybrids. Covers core loops, procedural generation, runs, combat, builds, progression, difficulty, economy, level design, replayability, and implementation-ready specifications while preserving meaningful decisions, systemic variety, and fair risk.
-version: 1.2.0
+version: 1.3.0
 author: Seunghu Song
 license: MIT
 metadata:
@@ -107,6 +107,8 @@ Describe the loop at three scales:
 
 For each scale, identify the information shown, decision made, resource risked, and feedback returned. Completion criterion: no loop step exists only to consume time; each changes player knowledge, capability, risk, or direction.
 
+Load `references/run-architecture-pacing.md` and use `templates/run-structure.md` when arranging acts, floors, biomes, pacing beats, reward cadence, build milestones, recovery budgets, or a run director.
+
 ### 4. Design the Decision Economy
 
 For every important choice, specify:
@@ -150,7 +152,7 @@ Separate these concepts:
 - **Expression progression:** more ways to pursue a preferred style
 - **Meta-progression:** persistent change between runs
 
-Prefer option, knowledge, and expression growth when preserving challenge matters. Meta-progression should open strategies, soften onboarding, or create goals without making early failures feel intentionally unwinnable.
+Prefer option, knowledge, and expression growth when preserving challenge matters. Meta-progression should open strategies, soften onboarding, or create goals without making early failures feel intentionally unwinnable. Load `references/meta-progression-unlocks.md` and use `templates/meta-progression-model.md` for persistent currencies, permanent-power bounds, unlock graphs, pool dilution, failure rewards, difficulty ladders, catch-up, and completion horizons.
 
 Shape difficulty through combinations of threat complexity, resource pressure, tempo, spatial constraints, and consequence severity. Do not rely only on inflated enemy health or damage. Completion criterion: difficulty changes what the player must notice or decide, not only how long combat lasts.
 
@@ -165,6 +167,8 @@ Convert the design into observable hypotheses:
 - Variables to change independently
 
 Recommend focused tests before large content production. When numbers are uncertain, label them as starting hypotheses and provide ranges or formulas rather than claiming they are balanced. Completion criterion: every high-risk assumption has a test and a measurable or observable result.
+
+Load `references/playtest-telemetry-diagnostics.md` and use `templates/playtest-plan.md` plus `templates/telemetry-events.md` when designing tests, instrumentation, segmentation, root-cause diagnosis, change validation, or revert criteria.
 
 ## Roguelike Core Systems
 
@@ -312,6 +316,42 @@ Return:
 6. Two likely convention mismatches
 7. Cheapest prototype that can validate the genre fit
 
+### Run Architecture Mode
+
+Return:
+
+1. Run contract, target duration, and restart cost
+2. Stage arc and pacing-beat grammar
+3. Build, reward, shop, and recovery milestones
+4. Weak, median, and strong power/threat bands
+5. Act/biome transformations and route information
+6. Director inputs, hard constraints, interventions, and forbidden manipulation
+7. Representative-seed tests and instrumentation
+
+### Meta-Progression Mode
+
+Return:
+
+1. Purpose, first-run viability, and failure contract
+2. Progression layers and permanent-power bound
+3. Currency ledger and unlock graph
+4. Pool-dilution and build-assembly impact
+5. Difficulty, narrative, catch-up, and completion rules
+6. Farming, trap-purchase, and grind safeguards
+7. Account-band tests and telemetry
+
+### Playtest and Diagnosis Mode
+
+Return:
+
+1. Decision, evidence, and competing hypotheses
+2. Segment, controlled context, and cheapest valid test
+3. Observations separated from interpretations
+4. Failure classification and root-cause chain
+5. Primary, guardrail, and bias-aware metrics
+6. Smallest intervention and expected side effects
+7. Follow-up test, observation window, and revert threshold
+
 ### Content Design Mode
 
 Return:
@@ -401,6 +441,8 @@ Use `templates/design-spec.md` and replace every placeholder. Keep rules unambig
 8. **One correct build.** Narrow checks invalidate experimentation. Provide multiple solution classes and soft counters.
 9. **Premature numeric precision.** Exact values disguise uncertainty. Test structural relationships before decimal tuning.
 10. **Design without production cost.** Every interaction multiplies QA and content burden. Name dependencies and minimum viable scope.
+11. **Invisible director manipulation.** Secretly correcting every strong or weak run erases learning and makes choices feel fake. Bound and log interventions.
+12. **Telemetry without a decision.** Collecting events without hypotheses creates dashboards, not insight. Tie each metric to a decision and threshold.
 
 ## Verification Checklist
 
@@ -410,14 +452,18 @@ Before finalizing a substantial response, verify:
 - [ ] The primary subgenre, secondary modifiers, and design dimensions agree with the actual rules
 - [ ] Assumptions and constraints are visible
 - [ ] The run loop contains recurring meaningful decisions
+- [ ] Run stages, reward milestones, and recovery opportunities form a coherent arc
+- [ ] Any adaptive director has explicit inputs, hard constraints, and forbidden interventions
 - [ ] Randomness creates adaptation and remains sufficiently legible
 - [ ] Major threats have telegraphs and counterplay
 - [ ] Builds have multiple viable paths and safeguards against degeneracy
 - [ ] Progression does not depend entirely on permanent stat inflation
+- [ ] Meta-progression has an honest first-run contract, bounded power, and pool-dilution checks
 - [ ] Level topology, room roles, geometry, and population are separated
 - [ ] Procedural generation has invariants, validation, repair, and reproducible seeds
 - [ ] Difficulty changes decisions, not only enemy statistics
 - [ ] Proposed numbers are identified as hypotheses and have tuning knobs
 - [ ] High-risk assumptions have cheap prototype tests
+- [ ] Metrics are tied to decisions, segments, guardrails, and action thresholds
 - [ ] The scope matches the likely team and content budget
 - [ ] The answer gives the user an actionable next step

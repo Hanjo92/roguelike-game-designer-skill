@@ -11,10 +11,18 @@ A portable agent skill for designing and reviewing the wider roguelike family: t
 - `references/enemy-encounter-design.md` — enemy roles, telegraphs, threat budgets, waves, elites, bosses, and encounters
 - `references/balance-economy.md` — combat formulas, power budgets, growth curves, economies, rewards, shops, and simulations
 - `references/procedural-generation-algorithms.md` — algorithm selection, hybrid pipelines, validation, repair, seeds, and evaluation
+- `references/run-architecture-pacing.md` — complete-run arcs, pacing grammar, reward milestones, recovery, and director boundaries
+- `references/playtest-telemetry-diagnostics.md` — test protocols, event semantics, segmentation, diagnosis, and change validation
+- `references/meta-progression-unlocks.md` — failure economy, persistent power, currencies, unlocks, pool dilution, and long-term goals
 - `templates/design-spec.md` — implementation-ready feature/system specification
 - `templates/item-spec.md` — implementation-ready item, weapon, or relic specification
 - `templates/encounter-spec.md` — implementation-ready enemy, boss, or encounter specification
 - `templates/balance-model.md` — formulas, target bands, economy ledger, run curve, and sensitivity worksheet
+- `templates/run-structure.md` — run contract, stage arc, pacing beats, milestones, routes, and director worksheet
+- `templates/playtest-plan.md` — controlled playtest, failure classification, metrics, and diagnosis worksheet
+- `templates/telemetry-events.md` — event envelope, minimum run funnel, schemas, and validation rules
+- `templates/meta-progression-model.md` — failure contract, currency ledger, unlock graph, and account-power model
+- `evals/` — cross-agent prompts, mandatory checks, critical failures, and a 100-point rubric
 
 ## Installation
 
