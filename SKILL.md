@@ -1,7 +1,7 @@
 ---
 name: roguelike-game-designer
 description: Use when designing, reviewing, or improving roguelike-family games—including traditional roguelikes, roguelites, action roguelites, deckbuilders, survivors-likes, tactical roguelikes, platform roguelites, strategy hybrids, and extraction hybrids. Covers core loops, procedural generation, runs, combat, builds, progression, difficulty, economy, level design, replayability, and implementation-ready specifications while preserving meaningful decisions, systemic variety, and fair risk.
-version: 1.3.0
+version: 1.3.1
 author: Seunghu Song
 license: MIT
 metadata:
@@ -275,16 +275,17 @@ For level review use `references/level-design-checklist.md`; for enemy and room 
 
 Begin with relationships, not isolated numbers.
 
-1. Define a baseline player turn, second, action, or encounter.
-2. Set target ranges for time-to-kill, damage taken, resource spend, and reward value.
-3. Price flexibility, reliability, range, area, speed, and safety as power.
-4. Compare choices under multiple realistic run states, not only ideal conditions.
-5. Simulate or spreadsheet repeated interactions where possible.
-6. Playtest for comprehension and behavior before fine numeric tuning.
+1. Define the balance contract: target players, intended asymmetries, mastery gradient, acceptable variance, and experiences that must not be equalized away.
+2. Define a baseline player turn, second, action, or encounter.
+3. Set target ranges for time-to-kill, damage taken, resource spend, and reward value.
+4. Price flexibility, reliability, range, area, speed, and safety as power.
+5. Compare choices under multiple realistic run states, not only ideal conditions.
+6. Simulate or spreadsheet repeated interactions where possible.
+7. Playtest for comprehension and behavior before fine numeric tuning.
 
 Track distributions, not only averages. Important signals include win rate by experience band, damage source, pick rate, skip rate, build concentration, resource drought length, room failure rate, and where runs become irrecoverable.
 
-Never infer balance from pick rate alone: popularity can reflect clarity, fantasy, novelty, or ease of use.
+Never infer balance from pick rate alone: popularity can reflect clarity, fantasy, novelty, or ease of use. Do not optimize one global outcome rate until the design names whose experience it represents and checks both behavioral data and player perception; aggregate parity can hide onboarding failures, inaccessible execution demands, or a dominant expert strategy.
 
 Load `references/balance-economy.md` and use `templates/balance-model.md` when the task requires formulas, power budgets, growth curves, resource ledgers, reward/shop tuning, sensitivity analysis, simulation assumptions, or balance change tracking.
 
@@ -370,13 +371,14 @@ Use the item or encounter template according to the content type.
 
 Return:
 
-1. Problem evidence, baseline unit, and target bands
-2. Formula and order of operations
-3. Power budget or resource source/sink ledger
-4. Weak, median, and strong-state comparison
-5. Variance guarantees, scaling caps, and exploit checks
-6. Sensitivity test and simulation/playtest plan
-7. Success metric, observation window, and revert threshold
+1. Balance contract, problem evidence, and affected player segments
+2. Baseline unit and target bands
+3. Formula and order of operations
+4. Power budget or resource source/sink ledger
+5. Weak, median, and strong-state comparison
+6. Variance guarantees, scaling caps, and exploit checks
+7. Sensitivity test and simulation/playtest plan
+8. Behavioral and perception evidence, observation window, and revert threshold
 
 ### System Design Mode
 

@@ -10,6 +10,18 @@
 - Systems excluded:
 - Evidence motivating the change:
 
+### Balance Contract
+
+- Target player segments and play context:
+- Protected experience / primary skill:
+- Intended asymmetries:
+- Mastery gradient by experience band:
+- Acceptable variance and tail limits:
+- Dominance boundary and observation window:
+- Behavioral evidence required:
+- Player-perception evidence required:
+- Explicit non-goals (what will not be equalized):
+
 ## 2. Baseline Unit
 
 - Unit: [turn / action / second / attack cycle / encounter / wave / day]
@@ -129,11 +141,14 @@ Order:
 
 - Hypothesis:
 - Prototype:
-- Metrics:
+- Behavioral metrics:
+- Player-reported fairness / clarity / satisfaction measure:
+- Join keys or controlled context linking perception to behavior:
 - Qualitative observations:
 - Segmentation:
 - Sample size / duration:
 - Success range:
+- Evidence type: [observational / controlled / causal]
 - Failure / revert threshold:
 
 ## 13. Change Log Entry

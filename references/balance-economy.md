@@ -16,6 +16,22 @@ Then define target relationships among player output, enemy threat, resource inc
 
 Use `templates/balance-model.md` to record assumptions and formulas.
 
+### 1.1 Define the Balance Contract
+
+“Balanced” is not a complete target. Before tuning, state what kind of balance the game promises:
+
+- **Target population and context:** which experience bands, account-power states, difficulty tiers, modes, and run stages the decision concerns
+- **Protected experience:** the fantasy, primary skill, risky strategy, accessibility option, or subgenre asymmetry that tuning must preserve
+- **Intended asymmetry:** which choices may be easier, safer, rarer, more complex, or higher ceiling without being equal in every metric
+- **Mastery gradient:** how novice, median, and expert outcomes should differ, and where execution or knowledge should matter
+- **Acceptable variance:** target distribution and tail limits for weak rolls, strong rolls, matchup extremes, and procedural outliers
+- **Dominance boundary:** how much advantage, usage concentration, or solution coverage becomes unacceptable, and over what observation window
+- **Evidence rule:** which behavioral measures and player-reported perceptions can trigger, block, or revert a change
+
+Do not substitute aggregate parity for this contract. Equal global win or pick rates can still hide an onboarding failure, one invalidated build family, inaccessible execution demands, or opposite problems in novice and expert play. Conversely, unequal rates can be intentional when choices differ in complexity, risk, acquisition timing, or audience.
+
+Use player reports to identify perceived fairness, clarity, and satisfaction, then connect those reports to matched behavioral context. Neither telemetry nor opinion alone identifies the cause. State whether evidence is observational, controlled, or causal, and keep stakeholder preference distinct from measured player behavior.
+
 ## 2. Core Combat Model
 
 Track at least:
@@ -216,6 +232,7 @@ Track:
 - Build concentration and conditional performance
 - Death source and stage
 - Recovery frequency after falling below target power
+- Player-reported fairness, clarity, and satisfaction joined to the relevant encounter, build, run stage, and experience band
 
 Avoid common false conclusions:
 
@@ -241,4 +258,4 @@ Change one structural relationship at a time when possible. Do not simultaneousl
 
 ## Completion Criteria
 
-A balance proposal is ready to test when its baseline unit, formulas, target bands, power budget, economy sources and sinks, variance guarantees, scaling order, difficulty stages, sensitive parameters, exploit checks, and success metrics are explicit. All initial numbers must be labeled as hypotheses until validated.
+A balance proposal is ready to test when its balance contract, affected segments, baseline unit, formulas, target bands, power budget, economy sources and sinks, variance guarantees, scaling order, difficulty stages, sensitive parameters, exploit checks, behavioral and perception evidence, and success metrics are explicit. All initial numbers must be labeled as hypotheses until validated.
