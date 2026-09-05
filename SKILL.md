@@ -1,11 +1,11 @@
 ---
 name: roguelike-game-designer
-description: Use when designing, reviewing, or improving roguelike-family games—including traditional roguelikes, roguelites, action roguelites, deckbuilders, survivors-likes, tactical roguelikes, platform roguelites, strategy hybrids, and extraction hybrids. Covers core loops, procedural generation, runs, combat, builds, progression, difficulty, economy, level design, replayability, and implementation-ready specifications while preserving meaningful decisions, systemic variety, and fair risk.
-version: 1.3.1
+description: Use when designing, reviewing, or improving roguelike-family games—including traditional roguelikes, roguelites, action roguelites, deckbuilders, survivors-likes, tactical roguelikes, platform roguelites, strategy hybrids, and extraction hybrids. Covers core loops, procedural generation, runs, combat, builds, progression, difficulty, accessibility, economy, level design, replayability, and implementation-ready specifications while preserving meaningful decisions, systemic variety, and fair risk.
+version: 1.4.0
 author: Seunghu Song
 license: MIT
 metadata:
-  tags: [game-design, roguelike, roguelite, subgenres, level-design, procedural-generation]
+  tags: [game-design, roguelike, roguelite, subgenres, level-design, procedural-generation, accessibility]
   compatibility: [codex, claude-code, antigravity, agent-skills]
 ---
 
@@ -29,6 +29,7 @@ Use this skill when the user asks for any of the following:
 - Combat, enemy, boss, item, relic, card, weapon, build, or status design
 - Run pacing, difficulty curves, resource pressure, rewards, shops, or economy
 - Permadeath, meta-progression, unlocks, onboarding, or accessibility
+- Difficulty options, assist modes, input barriers, cue redundancy, save/quit, or accessible playtests
 - Replayability, variety, synergy, anti-repetition, or content planning
 - Analysis of why a run feels unfair, repetitive, shallow, or snowbally
 - A game design document, feature specification, content table, or test plan
@@ -155,6 +156,8 @@ Separate these concepts:
 Prefer option, knowledge, and expression growth when preserving challenge matters. Meta-progression should open strategies, soften onboarding, or create goals without making early failures feel intentionally unwinnable. Load `references/meta-progression-unlocks.md` and use `templates/meta-progression-model.md` for persistent currencies, permanent-power bounds, unlock graphs, pool dilution, failure rewards, difficulty ladders, catch-up, and completion horizons.
 
 Shape difficulty through combinations of threat complexity, resource pressure, tempo, spatial constraints, and consequence severity. Do not rely only on inflated enemy health or damage. Completion criterion: difficulty changes what the player must notice or decide, not only how long combat lasts.
+
+Treat accessibility and difficulty as related but distinct contracts. Identify the intended decision or mastery, then remove incidental perception, cognition, input, timing, endurance, or sensory barriers without automatically flattening every challenge axis. Keep essential accessibility available before the first run and outside progression unlocks; make settings survive death and restart. Load `references/accessibility-difficulty.md` and use `templates/accessibility-matrix.md` for modular difficulty, assists, input and timing, redundant cues, save/quit, procedural compatibility, disclosure, or tests with players who have disabilities. Completion criterion: every supported assist profile preserves named decisions and passes its relevant run, generation, economy, timing, and save/load invariants.
 
 ### 7. Specify, Test, and Iterate
 
@@ -380,6 +383,18 @@ Return:
 7. Sensitivity test and simulation/playtest plan
 8. Behavioral and perception evidence, observation window, and revert threshold
 
+### Accessibility and Difficulty Mode
+
+Return:
+
+1. Protected fantasy, primary skill, and required decisions
+2. Barrier audit across perception, cognition, input, timing, endurance, sensory load, and consequence
+3. Presets plus independently adjustable axes with exact effects
+4. Input, clock, cue, pause, save/quit, failure, and restart contracts
+5. Systemic and procedural compatibility by supported assist profile
+6. Achievement, reward, leaderboard, and multiplayer disclosure
+7. Test plan with relevant players, full-run fatigue, invariants, and acceptance criteria
+
 ### System Design Mode
 
 Return:
@@ -425,6 +440,7 @@ Use `templates/design-spec.md` and replace every placeholder. Keep rules unambig
 - Use tables for content matrices, economies, and comparisons.
 - Use diagrams or ASCII for loops, graphs, and room topology when useful.
 - Include counterplay for every major threat.
+- Separate intended mastery from access barriers; do not use a single global difficulty scalar as an accessibility plan.
 - Include costs and opportunity costs for powerful choices.
 - Identify degenerate strategies and safeguards.
 - Mark example values as hypotheses until tested.
@@ -445,6 +461,7 @@ Use `templates/design-spec.md` and replace every placeholder. Keep rules unambig
 10. **Design without production cost.** Every interaction multiplies QA and content burden. Name dependencies and minimum viable scope.
 11. **Invisible director manipulation.** Secretly correcting every strong or weak run erases learning and makes choices feel fake. Bound and log interventions.
 12. **Telemetry without a decision.** Collecting events without hypotheses creates dashboards, not insight. Tie each metric to a decision and threshold.
+13. **Accessibility as one easy mode.** A global stat reduction cannot repair missing cues, inaccessible input, unreadable choices, fatigue, or settings lost on death. Separate demand axes and test the entire run lifecycle.
 
 ## Verification Checklist
 
@@ -464,6 +481,8 @@ Before finalizing a substantial response, verify:
 - [ ] Level topology, room roles, geometry, and population are separated
 - [ ] Procedural generation has invariants, validation, repair, and reproducible seeds
 - [ ] Difficulty changes decisions, not only enemy statistics
+- [ ] Accessibility settings are available before play, survive the failure loop, and do not require progression unlocks
+- [ ] Critical cues use redundant channels, and supported assist profiles preserve declared decisions and invariants
 - [ ] Proposed numbers are identified as hypotheses and have tuning knobs
 - [ ] High-risk assumptions have cheap prototype tests
 - [ ] Metrics are tied to decisions, segments, guardrails, and action thresholds

@@ -1,6 +1,6 @@
 # Roguelike Game Designer Skill
 
-A portable agent skill for designing and reviewing the wider roguelike family: traditional roguelikes, roguelites, action roguelites, deckbuilders, survivors-likes, tactical and platform roguelites, strategy hybrids, extraction hybrids, and experimental combinations. It covers core loops, procedural generation, combat, builds, progression, economy, difficulty, level design, documentation, and playtesting.
+A portable agent skill for designing and reviewing the wider roguelike family: traditional roguelikes, roguelites, action roguelites, deckbuilders, survivors-likes, tactical and platform roguelites, strategy hybrids, extraction hybrids, and experimental combinations. It covers core loops, procedural generation, combat, builds, progression, economy, difficulty, accessibility, level design, documentation, and playtesting.
 
 ## Files
 
@@ -14,6 +14,7 @@ A portable agent skill for designing and reviewing the wider roguelike family: t
 - `references/run-architecture-pacing.md` — complete-run arcs, pacing grammar, reward milestones, recovery, and director boundaries
 - `references/playtest-telemetry-diagnostics.md` — test protocols, event semantics, segmentation, diagnosis, and change validation
 - `references/meta-progression-unlocks.md` — failure economy, persistent power, currencies, unlocks, pool dilution, and long-term goals
+- `references/accessibility-difficulty.md` — challenge contracts, modular difficulty, assists, input, cues, run persistence, compatibility, and inclusive testing
 - `templates/design-spec.md` — implementation-ready feature/system specification
 - `templates/item-spec.md` — implementation-ready item, weapon, or relic specification
 - `templates/encounter-spec.md` — implementation-ready enemy, boss, or encounter specification
@@ -22,6 +23,7 @@ A portable agent skill for designing and reviewing the wider roguelike family: t
 - `templates/playtest-plan.md` — controlled playtest, failure classification, metrics, and diagnosis worksheet
 - `templates/telemetry-events.md` — event envelope, minimum run funnel, schemas, and validation rules
 - `templates/meta-progression-model.md` — failure contract, currency ledger, unlock graph, and account-power model
+- `templates/accessibility-matrix.md` — barrier audit, assist profiles, clock/cue contracts, lifecycle behavior, and compatibility tests
 - `evals/` — cross-agent prompts, mandatory checks, critical failures, and a 100-point rubric
 
 ## Installation

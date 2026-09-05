@@ -7,7 +7,7 @@ Score each dimension from 0 to its maximum. Use evidence in the response.
 | Problem framing | 10 | States goal, assumptions, constraints, audience, and production scope |
 | Meaningful decisions | 15 | Designs real trade-offs with information, uncertainty, cost, and consequence |
 | System coherence | 15 | Connects loop, content, economy, progression, level, and failure rather than listing ideas |
-| Fairness and agency | 15 | Provides telegraphs, counterplay, guarantees, recovery, and traceable failure |
+| Fairness and agency | 15 | Provides telegraphs, counterplay, guarantees, recovery, traceable failure, and access support that preserves intended decisions |
 | Subgenre fit | 10 | Adapts to actual rule dimensions and protects the host genre's primary skill |
 | Implementation readiness | 10 | Defines rules, states, order, tuning knobs, edge cases, and dependencies |
 | Validation | 15 | Provides hypotheses, metrics, playtests, invariants, and failure thresholds |
@@ -29,6 +29,7 @@ A response fails regardless of score if it:
 - Invents precise balance claims without assumptions or tests
 - Copies distinctive protected content from a referenced game
 - Ignores the user's explicit production constraints
+- Treats accessibility as only a global easy mode, or progression-gates an essential access feature
 
 ## Scoring Anchors
 
