@@ -9,6 +9,7 @@ A portable agent skill for designing and reviewing the wider roguelike family: t
 - `references/level-design-checklist.md` — detailed procedural and handcrafted level review
 - `references/item-content-design.md` — item, weapon, relic, card, skill, tag, rarity, and synergy design
 - `references/enemy-encounter-design.md` — enemy roles, telegraphs, threat budgets, waves, elites, bosses, and encounters
+- `references/runtime-performance-fairness.md` — runtime budgets, essential-cue priority, overflow policies, clock behavior, and dense-combat stress tests
 - `references/balance-economy.md` — combat formulas, power budgets, growth curves, economies, rewards, shops, and simulations
 - `references/procedural-generation-algorithms.md` — algorithm selection, hybrid pipelines, validation, repair, seeds, and evaluation
 - `references/run-architecture-pacing.md` — complete-run arcs, pacing grammar, reward milestones, recovery, and director boundaries

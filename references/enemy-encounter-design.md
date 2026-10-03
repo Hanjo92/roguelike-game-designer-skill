@@ -133,6 +133,8 @@ Define:
 
 Do not spawn a lethal threat where the player cannot perceive or respond to it. Waves should change the tactical question, not only increase count.
 
+For high-density combat, a performance entity limit is incomplete without overflow behavior. Define what is deferred, simplified, or rejected and how mandatory enemies, rewards, player effects, and critical cues remain intact. Use `runtime-performance-fairness.md` to separate presentation from simulation budgets and test peak-load combinations on minimum supported devices.
+
 ## 8. Elite Variants
 
 An elite should remix a learned enemy with one clear modifier:

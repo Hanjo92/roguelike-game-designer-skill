@@ -95,6 +95,27 @@
 - Invalid-position fallback:
 - Performance budget:
 
+## Runtime Load and Fairness, if applicable
+
+- Minimum supported device / platform and render target:
+- Simulation clock / update cadence and input timing:
+- Frame-time tail, hitch, memory, and backlog targets (initial hypotheses):
+
+| System | Live / burst / queued-work budget | Overflow policy | Gameplay or cue invariant |
+|---|---|---|---|
+| Enemies / summons |  |  |  |
+| Projectiles / hazards / proc chains |  |  |  |
+| Rewards / pickups |  |  |  |
+| Decoration / essential cues |  |  |  |
+
+- Decoration reduction order and reserved essential-cue capacity:
+- Pool reset / exhaustion behavior, if pooling is used:
+- Bounded catch-up / slowdown / recovery policy:
+- Peak-load build, seed, transition, and assist-profile scenarios:
+- Damage, reward, completion, and cue-preservation comparisons:
+
+Use `references/runtime-performance-fairness.md`; do not silently discard authoritative effects or essential information to meet a frame-rate target.
+
 ## Boss Phases, if applicable
 
 | Phase | Mastery test | New decision | Transition | Resource support |
@@ -135,6 +156,8 @@
 - [ ] Weak but viable builds can make progress
 - [ ] Strong builds do not skip every intended decision
 - [ ] Overlapping telegraphs remain readable
+- [ ] Peak-load tests preserve damage, rewards, required encounters, and critical cues on minimum supported hardware
+- [ ] Pool exhaustion, queue limits, and hitches follow a bounded, tested recovery policy
 - [ ] State transitions and interruption rules are deterministic
 - [ ] Boss phases support all intended build families
 - [ ] Metrics distinguish misunderstanding, execution failure, and missing counterplay

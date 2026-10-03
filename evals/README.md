@@ -22,6 +22,7 @@ Use these scenarios to compare the `roguelike-game-designer` skill across Codex,
 - `run-pacing.md` — run architecture, reward cadence, and director boundaries
 - `bad-design-detection.md` — resistance to harmful or shallow genre assumptions
 - `accessibility-difficulty.md` — modular access support that preserves the intended challenge contract
+- `runtime-performance.md` — dense-combat budgets and overload handling without hardware-dependent rule loss
 
 ## Passing Standard
 

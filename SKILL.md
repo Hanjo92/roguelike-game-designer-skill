@@ -1,7 +1,7 @@
 ---
 name: roguelike-game-designer
 description: Use when designing, reviewing, or improving roguelike-family games—including traditional roguelikes, roguelites, action roguelites, deckbuilders, survivors-likes, tactical roguelikes, platform roguelites, strategy hybrids, and extraction hybrids. Covers core loops, procedural generation, runs, combat, builds, progression, difficulty, accessibility, economy, level design, replayability, and implementation-ready specifications while preserving meaningful decisions, systemic variety, and fair risk.
-version: 1.4.0
+version: 1.5.0
 author: Seunghu Song
 license: MIT
 metadata:
@@ -142,6 +142,8 @@ Each content entry should specify:
 Completion criterion: content differs by behavior and decisions, not merely by health, damage, rarity, or art.
 
 Load `references/item-content-design.md` and use `templates/item-spec.md` for items, weapons, relics, cards, skills, and build components. Load `references/enemy-encounter-design.md` and use `templates/encounter-spec.md` for enemies, elites, bosses, waves, and encounter compositions.
+
+For dense crowds, projectiles, summons, proc chains, or load-dependent failures, load `references/runtime-performance-fairness.md`. Separate authoritative rules, essential cues, and decoration; define measured budgets, overflow behavior, clocks, and stress tests. Completion criterion: legal high-load builds preserve damage, rewards, required encounters, and counterplay on minimum supported hardware without unbounded catch-up or hidden hardware-dependent nerfs.
 
 ### 6. Build Progression and Difficulty
 
@@ -475,6 +477,7 @@ Before finalizing a substantial response, verify:
 - [ ] Any adaptive director has explicit inputs, hard constraints, and forbidden interventions
 - [ ] Randomness creates adaptation and remains sufficiently legible
 - [ ] Major threats have telegraphs and counterplay
+- [ ] Load-sensitive systems have explicit budgets and overflow policies that preserve gameplay and critical cues on supported devices
 - [ ] Builds have multiple viable paths and safeguards against degeneracy
 - [ ] Progression does not depend entirely on permanent stat inflation
 - [ ] Meta-progression has an honest first-run contract, bounded power, and pool-dilution checks

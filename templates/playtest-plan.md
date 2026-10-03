@@ -26,6 +26,9 @@
 - Run stage / room / boss phase:
 - Variables held constant:
 - Variable being changed:
+- For load-sensitive tests: device performance tier, render/update settings, clock policy, assist profile, and sustained-load context:
+- Peak-load scenario and injected hitch / pool / queue exhaustion, if relevant:
+- Matched-action or checkpoint comparison and gameplay invariants:
 
 ## Protocol
 
@@ -84,6 +87,7 @@ Keep observation separate from interpretation.
 - Observer effect:
 - Sample limitation:
 - Technical confound:
+- Frame-time / input-delay / simulation-backlog confound and evidence needed before balance inference:
 
 ## Diagnosis
 
