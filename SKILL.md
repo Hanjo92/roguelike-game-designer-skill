@@ -1,7 +1,7 @@
 ---
 name: roguelike-game-designer
 description: Use when designing, reviewing, or improving roguelike-family games—including traditional roguelikes, roguelites, action roguelites, deckbuilders, survivors-likes, tactical roguelikes, platform roguelites, strategy hybrids, and extraction hybrids. Covers core loops, procedural generation, runs, combat, builds, progression, difficulty, accessibility, economy, level design, replayability, and implementation-ready specifications while preserving meaningful decisions, systemic variety, and fair risk.
-version: 1.5.0
+version: 1.6.0
 author: Seunghu Song
 license: MIT
 metadata:
@@ -174,6 +174,8 @@ Convert the design into observable hypotheses:
 Recommend focused tests before large content production. When numbers are uncertain, label them as starting hypotheses and provide ranges or formulas rather than claiming they are balanced. Completion criterion: every high-risk assumption has a test and a measurable or observable result.
 
 Load `references/playtest-telemetry-diagnostics.md` and use `templates/playtest-plan.md` plus `templates/telemetry-events.md` when designing tests, instrumentation, segmentation, root-cause diagnosis, change validation, or revert criteria.
+
+For suspend/resume, reward settlement, seeded challenges, patch compatibility, or reproducible failures, load `references/run-state-reproducibility.md` and use `templates/run-state-contract.md`. Distinguish generation from resume and replay: a master seed alone does not preserve current RNG state, offered choices, selection history, or earned grants. Completion criterion: authoritative state, safe save boundaries, retry-safe settlement, recovery/version policy, and uninterrupted-versus-resumed tests are explicit within the project's actual platform and production scope.
 
 ## Roguelike Core Systems
 
@@ -483,6 +485,7 @@ Before finalizing a substantial response, verify:
 - [ ] Meta-progression has an honest first-run contract, bounded power, and pool-dilution checks
 - [ ] Level topology, room roles, geometry, and population are separated
 - [ ] Procedural generation has invariants, validation, repair, and reproducible seeds
+- [ ] Resume and seeded/replay claims name their state and version scope; interrupted reward settlement cannot duplicate or lose committed value
 - [ ] Difficulty changes decisions, not only enemy statistics
 - [ ] Accessibility settings are available before play, survive the failure loop, and do not require progression unlocks
 - [ ] Critical cues use redundant channels, and supported assist profiles preserve declared decisions and invariants

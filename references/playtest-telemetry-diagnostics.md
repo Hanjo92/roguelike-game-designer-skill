@@ -83,6 +83,8 @@ Separate observation from interpretation. â€œPlayer opened inventory six timesâ€
 
 Use `templates/playtest-plan.md`.
 
+For reproducible failures, attach the bounded state/action/version packet from `run-state-reproducibility.md`. The same seed is not sufficient control if actions, unlock pools, or RNG consumption differ. Compare matched checkpoints and earliest divergent events, and keep ruleset branches separate before attributing a change to balance.
+
 ## 6. Telemetry Event Design
 
 An event should include:

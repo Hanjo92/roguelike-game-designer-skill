@@ -259,6 +259,8 @@ Record:
 
 Use separate random streams so changing decoration does not silently alter topology or rewards. Provide developer commands to reproduce a seed, freeze layers, visualize graphs and influence maps, and batch-test thousands of seeds.
 
+Seeded generation is not the same promise as mid-run resume or cross-version replay. Save current stream state, selection history, offered choices, and authoritative run changes where needed; declare stable ordering and version scope. Use `run-state-reproducibility.md` and `templates/run-state-contract.md` for checkpoint, patch compatibility, reward-settlement, and continuation tests rather than assuming the master seed reconstructs every legal state.
+
 ## 16. Evaluation
 
 Batch metrics should include:

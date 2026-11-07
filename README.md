@@ -14,6 +14,7 @@ A portable agent skill for designing and reviewing the wider roguelike family: t
 - `references/procedural-generation-algorithms.md` — algorithm selection, hybrid pipelines, validation, repair, seeds, and evaluation
 - `references/run-architecture-pacing.md` — complete-run arcs, pacing grammar, reward milestones, recovery, and director boundaries
 - `references/playtest-telemetry-diagnostics.md` — test protocols, event semantics, segmentation, diagnosis, and change validation
+- `references/run-state-reproducibility.md` — seed/resume/replay boundaries, RNG and history restoration, reward settlement, patch compatibility, and reproducible failures
 - `references/meta-progression-unlocks.md` — failure economy, persistent power, currencies, unlocks, pool dilution, and long-term goals
 - `references/accessibility-difficulty.md` — challenge contracts, modular difficulty, assists, input, cues, run persistence, compatibility, and inclusive testing
 - `templates/design-spec.md` — implementation-ready feature/system specification
@@ -22,6 +23,7 @@ A portable agent skill for designing and reviewing the wider roguelike family: t
 - `templates/balance-model.md` — formulas, target bands, economy ledger, run curve, and sensitivity worksheet
 - `templates/run-structure.md` — run contract, stage arc, pacing beats, milestones, routes, and director worksheet
 - `templates/playtest-plan.md` — controlled playtest, failure classification, metrics, and diagnosis worksheet
+- `templates/run-state-contract.md` — authoritative state, checkpoint, settlement, recovery, migration, and reproduction worksheet
 - `templates/telemetry-events.md` — event envelope, minimum run funnel, schemas, and validation rules
 - `templates/meta-progression-model.md` — failure contract, currency ledger, unlock graph, and account-power model
 - `templates/accessibility-matrix.md` — barrier audit, assist profiles, clock/cue contracts, lifecycle behavior, and compatibility tests

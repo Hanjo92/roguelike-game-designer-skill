@@ -21,6 +21,8 @@
 
 - Game and content version:
 - Seed / generation version:
+- Reproduction checkpoint / RNG and selection-history state / ordered action trace, when needed:
+- Ruleset branch / mod and unlock-pool manifest / replay comparison scope:
 - Character / loadout / build:
 - Difficulty:
 - Run stage / room / boss phase:
@@ -87,6 +89,7 @@ Keep observation separate from interpretation.
 - Observer effect:
 - Sample limitation:
 - Technical confound:
+- Seed-only control limitation / changed RNG consumption / first divergent event:
 - Frame-time / input-delay / simulation-backlog confound and evidence needed before balance inference:
 
 ## Diagnosis
